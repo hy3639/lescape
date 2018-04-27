@@ -1,7 +1,6 @@
 $(document).ready(function(){
-	selectStyled();//디자인셀렉트
 	gnbHeight(); //gnb 높이값(브라우저 높이에따라 스크롤)
-
+	selectStyled(); // 디자인 셀렉트
 	/* ===========================================================================================================
 		메인
 	=========================================================================================================== */
@@ -156,33 +155,38 @@ $(document).ready(function(){
 		}
 	});
 
-		/*
-			데이트피커
-		*/
-		// 기본설정
-		$('.datepicker').each(function(){
-			var alt = $(this).closest('.date-text').find('.btn-calendar input');
 
-			$(this).datepicker({
-				numberOfMonths: 1,
-				monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
-				dayNamesMin: ['SUN','MON','TUE','WED','THU','FRI','SAT'],
-				showMonthAfterYear: true,
-				showOtherMonths:true,
-				yearSuffix: '.',
-				altField: alt,
-				onSelect: function(dateText, inst) {
-					$('.dimmed').remove();
-					$('.btn-calendar input').closest('.date-text').css({'z-index':'1'}).removeClass('on')
-						.find('.calendar-layer').hide();
-					$('.week-setting-box .btn-calendar').closest('.week-setting-box').css({'z-index':'1'}).removeClass('on')
-						.find('.calendar-layer').hide();
-				}
-			});
-			$(this).find('.ui-state-default').removeClass('ui-state-active');
+	// $('.select-box .item').click(function(){
+	// 	var val=$(this).closest('.select-box').find('select').val();
+	// 	console.log(val);
+	// });
 
 
+	/*
+		데이트피커
+	*/
+	// 기본설정
+	$('.datepicker').each(function(){
+		var alt = $(this).closest('.date-text').find('.btn-calendar input');
+
+		$(this).datepicker({
+			numberOfMonths: 1,
+			monthNames: ['01','02','03','04','05','06','07','08','09','10','11','12'],
+			dayNamesMin: ['SUN','MON','TUE','WED','THU','FRI','SAT'],
+			showMonthAfterYear: true,
+			showOtherMonths:true,
+			yearSuffix: '.',
+			altField: alt,
+			onSelect: function(dateText, inst) {
+				$('.dimmed').remove();
+				$('.btn-calendar input').closest('.date-text').css({'z-index':'1'}).removeClass('on')
+					.find('.calendar-layer').hide();
+				$('.week-setting-box .btn-calendar').closest('.week-setting-box').css({'z-index':'1'}).removeClass('on')
+					.find('.calendar-layer').hide();
+			}
 		});
+		$(this).find('.ui-state-default').removeClass('ui-state-active');
+	});
 		// 달력레이어 열기
 		$('.date-text .btn-calendar').click(function(){
 			if($(this).closest('.date-text').hasClass('on')){
@@ -196,18 +200,19 @@ $(document).ready(function(){
 			}
 		});
 
-		$('.week-setting-box .btn-calendar').click(function(){
-			$(this).closest('.week-setting-box').css({'z-index':'100'}).addClass('on').append('<div class="dimmed opacity"></div>')
-				.find('.calendar-layer').fadeIn();
-		});
-		// 달력레이어 닫기
-		$(document).on('click', '.dimmed', function(){
-			$('.dimmed').remove();
-			$('.btn-calendar input').closest('.date-text').css({'z-index':'1'}).removeClass('on')
-				.find('.calendar-layer').hide();
-			$('.week-setting-box .btn-calendar').closest('.week-setting-box').css({'z-index':'1'}).removeClass('on')
-				.find('.calendar-layer').hide();
-		});
+	$('.week-setting-box .btn-calendar').click(function(){
+		$(this).closest('.week-setting-box').css({'z-index':'100'}).addClass('on').append('<div class="dimmed opacity"></div>')
+			.find('.calendar-layer').fadeIn();
+	});
+	// 달력레이어 닫기
+	$(document).on('click', '.dimmed', function(){
+		$('.dimmed').remove();
+		$('.btn-calendar input').closest('.date-text').css({'z-index':'1'}).removeClass('on')
+			.find('.calendar-layer').hide();
+		$('.week-setting-box .btn-calendar').closest('.week-setting-box').css({'z-index':'1'}).removeClass('on')
+			.find('.calendar-layer').hide();
+	});
+
 });
 
 $(window).load(function(){
@@ -235,34 +240,36 @@ function gnbHeight(){
 function selectStyled(){
 	/* 셀렉트 :셀렉트 선택값(value)은 변수 oVal로 처리 */
 	$('select.styled1').each(function(){
-		var title = $(this).find('option:first-child').html();
-		var wid = $(this).outerWidth();
-		$(this).wrap('<div class="select-box">');
-		$(this).parents('.select-box').css({'width':wid}).append('<div class="select-title">');
-		$(this).parents('.select-box').find('.select-title').html(title);
+		if(!$(this).parents('div').hasClass('select-box')){
+			var title = $(this).find('option:first-child').html();
+			var wid = $(this).outerWidth();
+			$(this).wrap('<div class="select-box">');
+			$(this).parents('.select-box').css({'width':wid}).append('<div class="select-title">');
+			$(this).parents('.select-box').find('.select-title').html(title);
 
-		/* 스크롤이 있어야 하는 경우와 아닌 경우 */
-		if ($(this).hasClass('scroll')){
-			$(this).parents('.select-box').append('<ul class="select-list scroll-wrap">');
-		}else{
-			$(this).parents('.select-box').append('<ul class="select-list">');
-		}
+			/* 스크롤이 있어야 하는 경우와 아닌 경우 */
+			if ($(this).hasClass('scroll')){
+				$(this).parents('.select-box').append('<ul class="select-list scroll-wrap">');
+			}else{
+				$(this).parents('.select-box').append('<ul class="select-list">');
+			}
 
-		var option = $(this).find('option');
-		$(option).each(function(){
-			var txt = $(this).html();
-			$(this).parents('.select-box').find('.select-list').append('<li class="item">' + txt);
-			$(this).parents('.select-box').find('.item:first-child').addClass('on');
-		});
+			var option = $(this).find('option');
+			$(option).each(function(){
+				var txt = $(this).html();
+				$(this).parents('.select-box').find('.select-list').append('<li class="item">' + txt);
+				$(this).parents('.select-box').find('.item:first-child').addClass('on');
+			});
 
-		$(this).change(function(){
-			var transVal = $(this).val();
-			$('.select-title').html(transVal);
-			alert(transVal);
-		});
+			$(this).change(function(){
+				var transVal = $(this).val();
+				$('.select-title').html(transVal);
+				alert(transVal);
+			});
 
-		if($(this).attr('disabled')){
-			$(this).parents('.select-box').addClass('disabled');
+			if($(this).attr('disabled')){
+				$(this).parents('.select-box').addClass('disabled');
+			}
 		}
 	});
 
