@@ -1540,7 +1540,6 @@ padding-left: 80px; box-sizing: border-box;
 .highlight .highlight-cont .thumb-list {margin-top:42px;}
 .highlight .highlight-cont .thumb-list .item-thumb {
 	overflow:hidden;
-	width: 1000px;
 	height:340px;
 	margin-top:100px;
 }
@@ -1569,14 +1568,11 @@ padding-left: 80px; box-sizing: border-box;
 	white-space:nowrap;
 }
 .highlight .highlight-cont .thumb-list .item-thumb .text-box p {
-	overflow:hidden;
 	margin-top:11px;
 	color:#555;
 	font-size:15px;
 	font-weight:normal;
 	line-height:30px;
-	text-overflow:ellipsis;
-	white-space:nowrap;
 }
 .highlight .highlight-cont .thumb-list .item-thumb .text-box .date {
 	margin-top:7px;
@@ -1645,10 +1641,14 @@ padding-left: 80px; box-sizing: border-box;
 }
 .highlight-cont .view-area .view-top .view-tit-box span {display:block;}
 .highlight-cont .view-area .view-top .view-tit-box .view-tit {
+	overflow:hidden;
+	width:610px;
 	color:#222;
 	font-size:26px;
 	font-weight:normal;
 	line-height:38px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
 }
 .highlight-cont .view-area .view-top .view-tit-box .view-date {
 	margin-top:8px;
@@ -1684,3 +1684,25 @@ padding-left: 80px; box-sizing: border-box;
 	margin-top:-8px;
 	background:url(../images/icon/ico_hamburger_menu.png)no-repeat 0 0;
 }
+
+/* room*/
+.room-cont {
+	max-width:1330px;
+	margin:0 auto;
+}
+.room-cont .thumb-list02 {
+	overflow:hidden;
+}
+.room-cont .thumb-list02 .item-thumb {
+	float:left;
+	width:410px;
+	margin-left:50px;
+}
+.room-cont .thumb-list02 .item-thumb:first-child {}
+.room-cont .thumb-list02 .item-thumb .img-box {}
+.room-cont .thumb-list02 .item-thumb .text-box {}
+.room-cont .thumb-list02 .item-thumb .text-box .tit {}
+.room-cont .thumb-list02 .item-thumb .text-box p {}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box {}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box .more {}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box .reservation {}
