@@ -1791,10 +1791,12 @@ padding-left: 80px; box-sizing: border-box;
 .room-cont {
 	max-width:1330px;
 	margin:0 auto;
+	padding-top:42px;
 	text-align:center;
 }
 .room-cont .thumb-list02 {
 	display:inline-block;
+	overflow:hidden;
 	margin:0 -25px;
 	font-size:0;
 }
@@ -1806,7 +1808,6 @@ padding-left: 80px; box-sizing: border-box;
 	padding-bottom:100px;
 	text-align:center;
 }
-
 .room-cont .thumb-list02 .item-thumb .img-box {}
 .room-cont .thumb-list02 .item-thumb .text-box {
 	padding:32px 30px;
