@@ -104,8 +104,6 @@ $(document).ready(function(){
 
 	//컨텐츠영역 내의 topmenu
 	$('.top-menu-area .top-depth2 > li').click(function(){
-		$(this).addClass('on').siblings('li').removeClass('on');
-
 		$('.top-menu-area .top-depth3').removeClass('on');
 		$(this).find('.top-depth3').addClass('on');
 	});
