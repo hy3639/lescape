@@ -1811,6 +1811,7 @@ padding-left: 80px; box-sizing: border-box;
 .room-cont .thumb-list02 .item-thumb .text-box {
 	padding:32px 30px;
 	background-color:#fff;
+	box-sizing:border-box;
 }
 .room-cont .thumb-list02 .item-thumb .text-box .tit {
 	display:block;
@@ -1828,7 +1829,7 @@ padding-left: 80px; box-sizing: border-box;
 }
 .room-cont .thumb-list02 .item-thumb .text-box .menu-box {
 	overflow:hidden;
-	margin-top:14px;
+	margin-top:18px;
 	font-size:0;
 }
 .room-cont .thumb-list02 .item-thumb .text-box .menu-box a {
