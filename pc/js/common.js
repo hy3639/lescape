@@ -286,7 +286,7 @@ function selectStyled(){
 			$(this).parents('.select-box').append('<div class="select-close" style="position:fixed;left:0;right:0;top:0;bottom:0;">');
 		}
 	});
-	$('.select-box .item').mouseenter(function(){
+	$(document).on('click', '.select-box .item', function(){
 		$(this).parents('.select-box').find('.item').removeClass('on');
 		$(this).addClass('on');
 	});
