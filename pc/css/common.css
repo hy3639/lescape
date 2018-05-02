@@ -1399,28 +1399,28 @@ padding-left: 80px; box-sizing: border-box;
 /* customer center */
 .customer {padding-top: 88px;}
 .white-wrap {
-    width: 1000px;
-    padding: 80px 60px;
-    margin: 50px auto 0 auto;
-    background-color: #Fff;
-    box-sizing: border-box;
+	width: 1000px;
+	padding: 80px 60px;
+	margin: 50px auto 0 auto;
+	background-color: #Fff;
+	box-sizing: border-box;
 }
 .white-wrap .sub-tit {
-    font-size: 30px;
-    line-height: 30px;
-    color:#222;
-    border-bottom:1px solid #d4c49b;
-    padding-bottom:20px;
-    text-align: center;
+	font-size: 30px;
+	line-height: 30px;
+	color:#222;
+	border-bottom:1px solid #d4c49b;
+	padding-bottom:20px;
+	text-align: center;
 }
 
 .customer .float-area .right {margin-top: -35px;}
 .customer  .bullet1 {
-    display: inline-block;
-    margin-top: 50px;
+	display: inline-block;
+	margin-top: 50px;
 }
 .customer .board-write1 .float-area.select .select-box {
-    margin-left: 30px;
+	  margin-left: 30px;
 }
 .customer .board-write1 .float-area.select .select-box:first-child {margin-left: 0}
 .customer .board-write1 .float-area .select-box {float: left;}
@@ -1428,10 +1428,10 @@ padding-left: 80px; box-sizing: border-box;
 
 .customer .board-write1 th,
 .customer .board-write1 td {
-    padding:24px 0;
+	padding:24px 0;
 }
 .customer .board-write1 th.txtc {
-    padding-left: 80px;
+	padding-left: 80px;
 }
 
 /* story */
