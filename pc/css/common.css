@@ -1647,6 +1647,7 @@ padding-left: 80px; box-sizing: border-box;
 .highlight .highlight-cont .thumb-list {margin-top:42px;}
 .highlight .highlight-cont .thumb-list .item-thumb {
 	overflow:hidden;
+	width: 1000px;
 	height:340px;
 	margin-top:100px;
 }
