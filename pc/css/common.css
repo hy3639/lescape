@@ -640,6 +640,10 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 ----------------------------------------------------------------------------------------------------------- */
 .alignC {text-align: center !important;}
 .alignR {text-align: right !important;}
+.floatL {float:left !important;}
+.floatR {float:right !important;}
+
+.btn-area {overflow:hidden;}
 
 .btn-text {
 	display: inline-block;
@@ -665,6 +669,7 @@ article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,sec
 .btn-gold {background-color: #b79d59;}
 .btn-gold:hover {background-color:#978453;}
 .btn-gray {background-color: #7e7a74;}
+.btn-silver {background-color:#a9a49e;}
 .btn-gray:hover {background-color:#595959;}
 
 .btn-border-text {
@@ -1515,4 +1520,150 @@ padding-left: 80px; box-sizing: border-box;
 }
 .story .content .story-area .story-cont .partner-list .item-partaner.partanner02 .txt-box.ty02 a  {
 	color:#fff;
+}
+/* highlight */
+.highlight .highlight-cont {
+	max-width:1000px;
+	margin:0 auto;
+	padding-bottom:100px;
+}
+.highlight .highlight-cont .thumb-list {margin-top:42px;}
+.highlight .highlight-cont .thumb-list .item-thumb {
+	overflow:hidden;
+	height:340px;
+	margin-top:100px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb:first-child {margin-top:0;}
+.highlight .highlight-cont .thumb-list .item-thumb .img-box {
+	float:left;
+	width:50%;
+	height:340px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box {
+	float:left;
+	width:50%;
+	height:340px;
+	padding:36px 50px 33px;
+	background-color:#fff;
+	box-sizing:border-box;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box span {display:block;}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .tit {
+	color:#222;
+	font-size:26px;
+	font-weight:normal;
+	line-height:45px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box p {
+	margin-top:11px;
+	color:#555;
+	font-size:15px;
+	font-weight:normal;
+	line-height:30px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .date {
+	margin-top:7px;
+	color:#999;
+	font-size:14px;
+	font-weight:normal;
+	line-height:26px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .price {
+	margin-top:15px;
+	color:#001a72;
+	font-size:15px;
+	font-weight:normal;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .price em {
+	font-size:19px;
+	font-weight:bold;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .menu-box {
+	overflow:hidden;
+	margin-top:14px;
+	font-size:0;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .menu-box a {
+	display:inline-block;
+	position:relative;
+	width:49%;
+	height:50px;
+	padding-top:24px;
+	color:#aa8f49;
+	font-size:13px;
+	font-weight:normal;
+	line-height:26px;
+	box-sizing:border-box;
+	text-align:center;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box a:before {
+	content:'';
+	display:block;
+	position:absolute;
+	left:0; top:0;
+	width:1px;
+	height:50px;
+	background-color:#ddd;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box a:first-child:before {display:none;}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .menu-box .more {
+	background:url(../images/icon/ico_more.png)no-repeat center 11px;
+}
+.highlight .highlight-cont .thumb-list .item-thumb .text-box .menu-box .reservation {
+	background:url(../images/icon/ico_reservation.png)no-repeat center 11px;
+}
+/* view */
+.highlight-cont .view-area {
+	margin-top:42px;
+	padding:50px 60px 60px;
+	background-color:#fff;
+	box-sizing: border-box;
+}
+.highlight-cont .view-area .view-top {
+	overflow:hidden;
+	height:68px;
+}
+.highlight-cont .view-area .view-top .view-tit-box {
+	float:left;
+}
+.highlight-cont .view-area .view-top .view-tit-box span {display:block;}
+.highlight-cont .view-area .view-top .view-tit-box .view-tit {
+	color:#222;
+	font-size:26px;
+	font-weight:normal;
+	line-height:38px;
+}
+.highlight-cont .view-area .view-top .view-tit-box .view-date {
+	margin-top:8px;
+	color:#777;
+	font-size:15px;
+	font-weight:normal;
+	line-height:22px;
+}
+.highlight-cont .view-area .view-top .btn-border-text {
+	float:right;
+	margin-top:10px;
+}
+.highlight-cont .view-area .view-text-box {
+	margin-top:26px;
+	padding-top:40px;
+	border-top:1px solid #d4c49b;
+}
+.highlight-cont .view-area .view-text-box img {max-width:100%;}
+.highlight-cont .btn-area {
+	margin-top:50px;
+}
+.btn-text.btn-list {
+	position:relative;
+	min-width:160px;
+}
+.btn-text.btn-list:before {
+	content:'';
+	display:block;
+	position:absolute;
+	left:20px; top:50%;
+	width:24px;
+	height:17px;
+	margin-top:-8px;
+	background:url(../images/icon/ico_hamburger_menu.png)no-repeat 0 0;
 }
