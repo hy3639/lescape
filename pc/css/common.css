@@ -1791,27 +1791,72 @@ padding-left: 80px; box-sizing: border-box;
 .room-cont {
 	max-width:1330px;
 	margin:0 auto;
+	text-align:center;
 }
 .room-cont .thumb-list02 {
-	overflow:hidden;
-	position:relative;
-	margin-left:-25px;
-}
-.room-cont .thumb-list02::after {
-	content:'';
-	display:block;
-	clear:both;
+	display:inline-block;
+	margin:0 -25px;
+	font-size:0;
 }
 .room-cont .thumb-list02 .item-thumb {
+	display:inline-block;
 	float:left;
 	width:410px;
 	margin:0 25px;
+	padding-bottom:100px;
+	text-align:center;
 }
 
 .room-cont .thumb-list02 .item-thumb .img-box {}
-.room-cont .thumb-list02 .item-thumb .text-box {}
-.room-cont .thumb-list02 .item-thumb .text-box .tit {}
-.room-cont .thumb-list02 .item-thumb .text-box p {}
-.room-cont .thumb-list02 .item-thumb .text-box .menu-box {}
-.room-cont .thumb-list02 .item-thumb .text-box .menu-box .more {}
-.room-cont .thumb-list02 .item-thumb .text-box .menu-box .reservation {}
+.room-cont .thumb-list02 .item-thumb .text-box {
+	padding:32px 30px;
+	background-color:#fff;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .tit {
+	display:block;
+	color:#222;
+	font-size:24px;
+	font-weight:normal;
+	line-height:36px;
+}
+.room-cont .thumb-list02 .item-thumb .text-box p {
+	margin-top:12px;
+	color:#555;
+	font-size:15px;
+	font-weight:normal;
+	line-height:30px;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box {
+	overflow:hidden;
+	margin-top:14px;
+	font-size:0;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box a {
+	display:inline-block;
+	position:relative;
+	width:49%;
+	height:50px;
+	padding-top:24px;
+	color:#aa8f49;
+	font-size:13px;
+	font-weight:normal;
+	line-height:26px;
+	box-sizing:border-box;
+	text-align:center;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box a:before {
+	content:'';
+	display:block;
+	position:absolute;
+	left:0; top:0;
+	width:1px;
+	height:50px;
+	background-color:#ddd;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box a:first-child:before {display:none;}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box .more {
+	background:url(../images/icon/ico_more.png)no-repeat center 11px;
+}
+.room-cont .thumb-list02 .item-thumb .text-box .menu-box .reservation {
+	background:url(../images/icon/ico_reservation.png)no-repeat center 11px;
+}
