@@ -282,7 +282,7 @@ function selectStyled(){
 		}
 	});
 
-	$('.select-title').click(function(){
+	$(document).on('click', '.select-title', function(){
 		if($(this).parents('.select-box').hasClass('disabled') == false){
 			$(this).parents('.select-box').addClass('focus').find('.select-list').slideDown(200);
 			$(this).parents('.select-box').append('<div class="select-close" style="position:fixed;left:0;right:0;top:0;bottom:0;">');
@@ -292,7 +292,7 @@ function selectStyled(){
 		$(this).parents('.select-box').find('.item').removeClass('on');
 		$(this).addClass('on');
 	});
-	$('.select-box .item').click(function(){
+	$(document).on('click', '.select-box .item', function(){
 		var idx = $(this).index();
 		var oVal = $(this).parents('.select-box').find('option').eq(idx).val();
 		var txt = $(this).html();
