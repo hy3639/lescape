@@ -1794,14 +1794,19 @@ padding-left: 80px; box-sizing: border-box;
 }
 .room-cont .thumb-list02 {
 	overflow:hidden;
+	position:relative;
+	margin-left:-25px;
+}
+.room-cont .thumb-list02::after {
+	content:'';
+	display:block;
+	clear:both;
 }
 .room-cont .thumb-list02 .item-thumb {
 	float:left;
-
 	width:410px;
-	margin-left:50px;
+	margin:0 25px;
 }
-.room-cont .thumb-list02 .item-thumb:first-child {}
 
 .room-cont .thumb-list02 .item-thumb .img-box {}
 .room-cont .thumb-list02 .item-thumb .text-box {}
